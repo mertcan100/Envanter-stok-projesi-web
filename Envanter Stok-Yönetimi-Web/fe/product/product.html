@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../index.css" />
+  <link rel="stylesheet" type="text/css" href="product.css" />
+</head>
+
+<body>
+
+  <ul>
+    <li><a href="../index.html">Home page</a></li>
+    <li><a class="active" href="products.html">Products</a></li>
+    <li><a href="../stock/stock.html">Stocks</a></li>
+    <li><a href="../tax/tax.html">Taxes</a></li>
+    <li><a href="../rawmaterial/rawmaterial.html">Raw materials</a></li>
+  </ul>
+  <div class="content">
+    <form class="form-container"  onsubmit="addProduct()">
+      
+      <div class="form__group">
+        <input id="product-name" class="form__field" placeholder="Your Product Name" required>
+        <label for="product-name" class="form__label">Product Definition</label>
+      </div>
+      <div class="form__group">
+        <input type="number" id="price" class="form__field" placeholder="Price" required>
+        <label for="price" class="form__label">Product Price</label>
+      </div>
+      <div class="form__group">
+        <input type="number" id="stock-level" class="form__field" placeholder="Stock Level" required>
+        <label for="stock-level" class="form__label">Stock Level</label>
+      </div>
+      <div class="button-container">
+        <button class="button" >Sumbit</button>
+      </div>
+
+    </form>
+    
+    <form class="form-container" onsubmit="deleteProduct()">
+      <div class="form__group">
+        <input type="number" id="productID" class="form__field" placeholder="delete id" required>
+        <label for="id" class="form__label">delete id</label>
+      </div>
+      <div class="button-container">
+        <button class="button">Delete</button>
+      </div>
+    </form>
+    
+    <table>
+      <tr>
+        <th>Product Number</th>
+        <th>Product Definition</th>
+        <th>Product Price</th>
+        <th>Stock Level</th>
+      </tr>
+      <tbody id="productList">
+      </tbody>
+
+    </table>
+  </div>
+  <script src="./product.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../index.css" />
+    <link rel="stylesheet" type="text/css" href="../product/product.css"/>
+  </head>
+
+<body>
+
+  <ul>
+    <li><a href="../index.html">Home page</a></li>
+    <li><a  href="../product/product.html">Products</a></li>
+    <li><a href="../stock/stock.html">Stocks</a></li>
+    <li><a class="active" href="tax.html">Taxes</a></li> 
+    <li><a href="../rawmaterial/rawmaterial.html">Raw materials</a></li>
+    
+  </ul>
+  <div class="content">
+    <form class="form-container" onsubmit="addTax()">
+
+      
+     
+      <div class="form__group">
+        <input type="text" id="order-id" class="form__field" placeholder="Order ID" required>
+        <label for="order-id" class="form__label">Order ID</label></div>
+      
+      <div class="form__group">
+        <input type="number" id="tax-rate" class="form__field" placeholder="Tax Rate" required>
+        <label for="tax-rate" class="form__label">Tax Rate (%)</label>
+      </div>
+      <div class="button-container">
+        <button class="button">Submit</button>
+      </div>
+      
+
+    </form>
+    <form class="form-container" onsubmit="deleteTax()">
+    <div class="form__group">
+      <input type="number" id="id" class="form__field" placeholder="delete id" required>
+      <label for="id" class="form__label">delete id</label>
+    </div>
+    <div class="button-container">
+      <button class="button">Delete</button>
+    </div>
+  </form>
+    <table>
+      <tr>
+        <th>Tax Optimization ID</th>
+        <th>Order ID</th>
+        <th>Tax Rate (%)</th>
+      </tr>
+      <tbody id="taxList">
+      </tbody>
+
+    </table>
+  </div>
+  <script src="./tax.js"></script>
+</body>
+
+</html>

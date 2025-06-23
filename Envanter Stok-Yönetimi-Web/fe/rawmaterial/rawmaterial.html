@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../index.css" />
+  <link rel="stylesheet" type="text/css" href="rawmaterial.css" />
+</head>
+
+<body>
+
+  <ul>
+    <li><a href="../index.html">Home page</a></li>
+    <li><a href="../product/product.html">Products</a></li>
+    <li><a href="../stock/stock.html">Stocks</a></li>
+    <li><a href="../tax/tax.html">Taxes</a></li>
+    <li><a class="active" href="rawmaterial.html">Raw materials</a></li>  
+  </ul>
+  <div class="content">
+    <form class="form-container"  onsubmit="addRawmaterial()">
+      
+      <div class="form__group">
+        <input id="rawmaterial-name" class="form__field" placeholder="Your Rawmaterial ID" required>
+        <label for="rawmaterial-name" class="form__label">Raw Material Name</label>
+      </div>
+      <div class="form__group">
+        <input type="number" id="rawmaterial-quantity" class="form__field" placeholder="Quantity" required>
+        <label for="price" class="form__label">Raw Material Quantity</label>
+      </div>
+       
+      <div class="button-container">
+        <button class="button" >Sumbit</button>
+      </div>
+
+    </form>
+    
+    <form class="form-container" onsubmit="deleteRawmaterial()">
+      <div class="form__group">
+        <input type="number" id="rawmaterialID" class="form__field" placeholder="delete id" required>
+        <label for="id" class="form__label">delete id</label>
+      </div>
+      <div class="button-container">
+        <button class="button">Delete</button>
+      </div>
+    </form>
+    
+    <table>
+      <tr>
+        <th>Raw Material ID</th>
+        <th>Raw Material Name</th>
+        <th>Quantity</th> 
+      </tr>
+      <tbody id="rawmaterialList">
+      </tbody>
+
+    </table>
+  </div>
+  <script src="./rawmaterail.js"></script>
+</body>
+
+</html>
